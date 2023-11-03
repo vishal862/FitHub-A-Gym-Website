@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitHub Gym Equipments</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=IBM+Plex+Serif:wght@100&family=Kanit:wght@100&family=Lobster&family=Righteous&family=Ubuntu:wght@300&family=Unbounded:wght@200&family=Varela+Round&display=swap');
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        /* NAVIGATION BAR */
+        #logo a {
+            display: flex;
+            height: 78px;
+            justify-content: center;
+        }
+
+        ul {
+            display: flex;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: whitesmoke;
+            font-weight: bold;
+            font-size: 20px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        ul li a:hover {
+            color: rgb(255, 255, 255);
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .items {
+            margin: 26px 30px;
+        }
+
+        #navbar {
+            display: flex;
+            background: linear-gradient(to bottom, red, black);
+        }
+
+        #navbar li {
+            transition: transform 0.2s;
+        }
+
+        #navbar li:hover {
+            transform: scale(1.1);
+        }
+
+        /* section bar */
+        body::before {
+            content: "";
+            background: url("https://img.freepik.com/premium-photo/abstract-luxury-blur-dark-grey-black-gradient_1258-14423.jpg") center center/cover;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+        }
+
+        #container-2 {
+            font-weight: bold;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .para-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            top: 52px;
+        }
+
+        .para2 {
+            font-size: 20px;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            width: 340px;
+            height: 440px;
+            margin: 20px 20px;
+            background: black;
+            border: 2px solid red;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 80%;
+            object-fit: cover;
+        }
+
+        h2 {
+            text-align: center;
+            background: linear-gradient(to bottom, red, darkred);
+            color: white;
+            padding: 8px 0;
+            margin: 0;
+            font-size: 18px;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        @media screen and (max-width: 1090px) {
+            .card {
+                margin: 15px 6px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <ul>
+            <div id="logo">
+                <a href="home.html"><img src="https://mir-s3-cdn-cf.behance.net/projects/404/bf8597180902217.Y3JvcCwxMTY5LDkxNSwxNTMsMA.png" alt="logo"></a>
+            </div>
+            <li class="items"><a href="home.html">Home</a></li>
+            <li class="items"><a href="gallery.html">Gallery</a></li>
+            <li class="items"><a href="#">Equipments</a></li>
+           
+        </ul>
+    </nav>
+    <section id="container-2">
+        </div>
+        <div class="cards-container">
+            <div class="card" id="">
+                <img id="card-1" src="https://www.msffit.com/cdn/shop/products/52_8c6ab7f0-f50e-4041-b041-4b2061cfcf73_700x700.png?v=1685147400" alt="">
+                <h2>Lat Pulldown</h2>
+            </div>
+            <div class="card">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2023/9/341516316/XZ/HU/BX/195316177/shoulder-press-machine-500x500.jpg" alt="">
+                <h2>Shoulder Press</h2>
+            </div>
+            <div class ="card">
+                <img id="yy" src="https://images.jdmagicbox.com/rep/b2b/incline-chest-press-machine/incline-chest-press-machine-5.jpg" alt="">
+                <h2>Inclined Chest Press</h2>
+            </div>
+            <div class="card">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2023/7/328389820/ZO/BI/VU/191892587/hammer-incline-chest-press-500x500.jpg" alt="">
+                <h2>Dual Axis Chest Press</h2>
+            </div>
+        </div>
+        <div class="cards-container">
+            <div class="card">
+                <img src="https://5.imimg.com/data5/YP/AM/MY-44202886/untitled-500x500.png" alt="">
+                <h2>Compound Row</h2>
+            </div>
+            <div class="card">
+                <img src="https://5.imimg.com/data5/BU/CO/MK/SELLER-54115500/pec-deck-fly-machine-500x500.jpg" alt="">
+                <h2>Pec Dec Fly</h2>
+            </div>
+            <div class="card">
+                <img id="yy" src="https://static.connect2india.com/c2icd/company_resources/2826841/images/products/product-fitness-sl7023-bicep-curl-machine.jpg" alt="">
+                <h2>Preacher Curls</h2>
+            </div>
+            <div class="card">
+                <img src="https://image.made-in-china.com/2f0j00dlafTANPLOce/Tricep-Extension-Circui-Training-Bicep-Curl-Strength-Equipment-Exercise-Machine.jpg" alt="">
+                <h2>Tricep Dips Machine</h2>
+            </div>
+        </div>
+        <div class="cards-container">
+            <div class="card">
+                <img id="card-1" src="https://5.imimg.com/data5/SELLER/Default/2021/4/PM/EQ/FX/9374589/leg-press-machine.png" alt="">
+                <h2>Leg Press</h2>
+            </div>
+            <div class="card">
+                <img id="yy" src="https://cdn.sportsplanet.ae/media/catalog/product/cache/afe65d45e6747e254a3ea397f23490d8/i/n/insight_dh015.jpg" alt="">
+                <h2>Seated Calf</h2>
+            </div>
+            <div class = "card">
+                <img id="card-1" src="https://5.imimg.com/data5/UU/QW/MY-4004418/leg-extension-machine-500x500.jpg" alt="">
+                <h2>Leg Extension</h2>
+            </div>
+            <div class="card">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2023/10/355663245/JY/HD/FG/45642476/smith-machine-power-rack.png" alt="">
+                <h2>Smith Machine</h2>
+            </div>
+        </div>
+        <div class="cards-container">
+            <div class="card">
+                <img id="card-1" src="https://www.achievefitness.co.nz/media/catalog/product/cache/78367f5f0d8eb8125130931fb3c17858/y/k/yk43280_york__aspire__280__fid__bench.jpg" alt="">
+                <h2>Benches</h2>
+            </div>
+            <div class="card">
+                <img id="yy" src="https://www.bullrockfitness.com/wp-content/uploads/2023/04/21_functional_trainer_machine_workouts.jpg" alt="">
+                <h2>Cable Cross Machine</h2>
+            </div>
+        </div>
+    </section>
+    
+</body>
+
+</html>

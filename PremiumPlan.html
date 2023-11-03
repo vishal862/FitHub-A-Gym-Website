@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Membership Checkout</title>
+    <link rel="stylesheet" type="text/css" href="css/checkout.css">
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <div class="container">
+        <div style="text-align: right; padding-right: 10px;">
+            <button id="closeButton" class="close-button">X</button>
+        </div>
+        <form>
+            <h2>Buy Your Premium Plan Today!</h2>
+            <div class="input-container">
+                <label for="full_name">Full Name</label>
+                <input type="text" name="full_name" id="full_name" required placeholder="Aryan Sawant">
+            </div>
+            <div class="input-container">
+                <label for="email">Email ID</label>
+                <input type="email" name "email" id="email" required placeholder="aryan123@gmail.com">
+            </div>
+            <div class="input-container">
+                <label for="mobile">Mobile Number</label>
+                <input type="tel" name="mobile" id="mobile" required placeholder="9876543210">
+            </div>
+            <button type="button" class="submit-button" onclick="MakePayment()">Proceed to Payment</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("closeButton").addEventListener("click", function () {
+            window.location.href = "home.html";
+        });
+        function MakePayment() {
+            var full_name = document.getElementById("full_name").value;
+            var email = document.getElementById("email").value;
+            var mobile = document.getElementById("mobile").value;
+
+            if (!full_name.trim() || !email.trim() || !mobile.trim()) {
+                alert("Please enter all the required details.");
+                return; // Stop payment if any required field is missing or empty
+            }
+
+            var options = {
+                "key": "rzp_test_OXURu2D4weDhwM", // Enter the Key ID generated from the Dashboard
+                "amount": "400000", // Amount is in currency subunits. Default currency is INR. Hence, 400000 refers to 4000.00 INR
+                "currency": "INR",
+                "name": "FitHub",
+                "description": "Be Strong, Be Fit",
+                "image": "https://alesayi.com/wp-content/uploads/2021/12/Logosfithub.png",
+                "handler": function (response) {
+                    // You can handle the success callback here if needed
+                    jQuery.ajax({
+                        success: function (result) {
+                            window.location.href = "success.php";
+                        }
+                    });
+                },
+                "prefill": {
+                    "name": full_name,
+                    "email": email,
+                    "contact": mobile 
+                },
+            };
+
+            var rzp1 = new Razorpay(options);
+            rzp1.open();
+        }
+    </script>
+</body>
+</html>
