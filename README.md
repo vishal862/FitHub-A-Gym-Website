@@ -64,7 +64,7 @@
 
 ## Step 12: Access FitHub
 
-12. Open the `FitHub` folder in VSCode and then go to your web browser. Type `localhost/FitHub/home.html`.
+12. Copy/Cut the `FitHub` folder and locate "C:\xampp\htdocs" and paste the FitHub folder in htdocs and atlast open FitHub folder in VSCode and then go to your web browser. Type `localhost/FitHub/home.html`.
 
 ## Step 13: Project Completion
 
